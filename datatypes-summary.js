@@ -58,4 +58,30 @@ function greet() {
   console.log("Hello Nafi");
 } // * Output is "Function" but it is "Function Object"
 
-console.log(typeof greet);
+// console.log(typeof greet);
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// ! javascript a variables data gulo 2 ta way te memory te save hoy.....Primitive sob data gulo stack memory te save hoy....non-primitive data gulo heap memory te save hoy
+
+let personName = "nafi"; // * ei variable stack memory te save hobe
+
+let person2Name = personName;
+
+person2Name = "Rafi";
+
+// console.log(personName);
+// console.log(person2Name);
+// ! Uporer code stack memory er examples
+
+// ! Heap memory
+
+const user = {
+  email: "user@google.com",
+  uid: "198klkl",
+};
+
+const user2 = user;
+user2.email = "user2@yahoo.com";
+console.log(user);
+console.log(user2);
