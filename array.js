@@ -27,3 +27,8 @@ const newArr2 = myArr.splice(1, 4);
 // console.log(newArr2); // it also takes two params as index it will remove the values from the originial arr and return a new arr.
 
 // console.log(myArr.includes(2)); // check if the value exist in the array return true or false boolean data types
+const arr = [1, 2, 3, 4];
+const ans = arr.concat(5, 6, 7);
+console.log(ans);
+console.log(typeof ans);
+console.log(arr);
