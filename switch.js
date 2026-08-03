@@ -51,19 +51,19 @@
 //     break;
 // }
 
-let age = 60;
+// let age = 60;
 
-switch (age) {
-  case 18:
-    console.log("Adult");
-    break;
-  case 30:
-    console.log("Mid age");
-    break;
-  case 60:
-    console.log("End times");
-    break;
-  default:
-    console.log("none matched");
-    break;
-}
+// switch (age) {
+//   case 18:
+//     console.log("Adult");
+//     break;
+//   case 30:
+//     console.log("Mid age");
+//     break;
+//   case 60:
+//     console.log("End times");
+//     break;
+//   default:
+//     console.log("none matched");
+//     break;
+// }
