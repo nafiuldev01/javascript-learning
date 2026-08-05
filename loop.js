@@ -44,3 +44,42 @@ for (let index = 1; index <= 20; index++) {
   }
   // console.log(`Value of index is ${index}`);
 }
+
+// ! While loop
+
+// let i = 0;
+
+// while (i <= 10) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+//   i = i + 1;
+// }
+
+// const arr2 = ["superman", "spiderman", "batman"];
+// let value = "";
+// let i = 0;
+
+// while (i < arr2.length) {
+//   if (arr2[i] === "batman") {
+//     value = arr2[i];
+//     break;
+//   }
+//   i = i + 1;
+// }
+// console.log(value);
+
+// ! do while // in do while loop there is an  exception the code executes first and then the condition is checked if the condition true then the loop runs but if false the loop stop but the code will executes first
+let h = 1;
+
+do {
+  // ? The code executes first
+  // console.log(`Value of h is ${h}`);
+  h = h + 1;
+} while (h <= 10); // ? the conditon checked last
+
+let g = 11;
+do {
+  console.log(`the value of g is ${g}`); // ? the code will print 11 first cause the condition will be checked last
+  g = g + 1;
+} while (g <= 10);
