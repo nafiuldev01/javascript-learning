@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Relations</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <!-- this is a comment -->
+      <div class="day">Saturday</div>
+      <div>Sunday</div>
+      <div>Monday</div>
+      <div>Tuesday</div>
+    </div>
+
+    <script>
+      const parent = document.querySelector(".parent");
+
+      // parent.children method return the html collection of the childrens inside the html tag collection
+
+      for (let i = 0; i < parent.children.length; i++) {
+        if (parent.children[i].innerText === "Sunday") {
+          parent.children[i].style.color = "orange";
+        }
+        //console.log(parent.children[i].innerText);
+      }
+
+      //console.log(parent.firstElementChild); // this gives us the first children element of its parent
+      //console.log(parent.lastElementChild); // this gives us the last children element of its parent;
+
+      const dayOne = document.querySelector(".day");
+      // console.log(dayOne);
+
+      //console.log(dayOne.parentElement); // this method return the parent element of its child element
+
+      console.log(dayOne.nextElementSibling); // it returns the next sibling after dayOne
+
+      console.log(parent.childNodes); // this gives us all the child nodes of the parents remember: every line break and comment also count as node line break count as text node
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodes | Nodelist</title>
+  </head>
+  <body>
+    <!-- make a div, give class , title, id attribute add "learning node in javascript" text then add that div into the body and show to browser add some style-->
+  </body>
+  <script>
+    document.body.style.backgroundColor = "#212121";
+    const div = document.createElement("div");
+    div.setAttribute("class", "node");
+    div.setAttribute("title", "this is a title");
+    div.setAttribute("id", "main");
+    div.style.color = "orange";
+    //div.innerText = "learning node in javascript";
+    const text = document.createTextNode("learning node in javascript");
+    div.appendChild(text);
+    document.body.appendChild(div);
+  </script>
+</html>

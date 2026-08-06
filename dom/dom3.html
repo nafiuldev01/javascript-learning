@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Edit and Remove</title>
+  </head>
+  <style>
+    body {
+      background-color: #212121;
+      color: white;
+    }
+  </style>
+  <body>
+    <ul class="languages">
+      <li>Javascript</li>
+    </ul>
+  </body>
+
+  <script>
+    function addLanguage(langName = "") {
+      if (!langName) return;
+      const ul = document.querySelector("ul");
+      const li = document.createElement("li");
+      const text = document.createTextNode(langName);
+      li.appendChild(text);
+      ul.appendChild(li);
+    }
+    addLanguage("Ruby");
+    addLanguage("Python");
+    addLanguage("C++");
+
+    // edit element
+
+    function edit(updateLi, updatedLang) {
+      if (!updateLi || !updatedLang) return;
+      const li = document.querySelector(`li:nth-child(${updateLi})`);
+      const text = document.createTextNode(updatedLang);
+      const newLi = document.createElement("li");
+      newLi.appendChild(text);
+      li.replaceWith(newLi);
+    }
+
+    edit(3, "GoLang");
+
+    edit(4, "Java");
+
+    // remove element
+
+    function removeLang(removeLi) {
+      if (!removeLi) return;
+      const li = document.querySelector(`li:nth-child(${removeLi})`);
+      li.remove();
+    }
+
+    removeLang(4);
+  </script>
+</html>
