@@ -8,6 +8,6 @@ buttons.forEach((btn) => {
   });
 });
 
-resetButton.addEventListener("click", (e) => {
+resetButton.addEventListener("click", () => {
   body.style.backgroundColor = "white";
 });
