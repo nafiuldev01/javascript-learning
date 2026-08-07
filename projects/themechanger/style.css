@@ -45,3 +45,14 @@ body {
 #yellow {
   background: yellow;
 }
+
+#reset {
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 10px 40px;
+  border: 2px solid black;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
