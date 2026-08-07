@@ -1,0 +1,2 @@
+first create 4 button with span tags with random colors give them class and id
+then create js logic to change the body's bg color according to the buttons bg color
