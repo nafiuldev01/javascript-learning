@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing game</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #212121;
+      color: white;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    form label {
+      font-size: 30px;
+    }
+
+    #userInput {
+      padding: 10px 30px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    #sbt {
+      padding: 10px 20px;
+      font-weight: 600;
+      color: white;
+      background-color: orange;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .wrapper h2 {
+      font-size: 50px;
+    }
+
+    .result p {
+      font-size: 20px;
+    }
+    #score {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .result p span {
+      font-size: 20px;
+      color: orange;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <h2>Guess a number</h2>
+      <!-- form -->
+      <form>
+        <label for="">Provide a number</label>
+        <input type="text" id="userInput" />
+        <input type="submit" id="sbt" />
+      </form>
+      <div class="result">
+        <p>Previous guess : <span id="prevGuess"></span></p>
+        <p>Remaining guess : <span id="remainingGuesses">10</span></p>
+      </div>
+      <p id="score"></p>
+    </div>
+
+    <script src="guess.js"></script>
+  </body>
+</html>
