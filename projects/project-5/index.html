@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock | Paper | Scissor</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #212121;
+        color: white;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid orange;
+        border-radius: 10px;
+        width: 30%;
+        margin: auto;
+        padding: 50px;
+      }
+
+      .moves {
+        display: flex;
+        padding: 20px;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .wrapper .moves div {
+        padding: 40px;
+        border: 1px solid orange;
+        border-radius: 5px;
+        font-size: 30px;
+        cursor: pointer;
+        transition: all 0.3s;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        -webkit-tap-highlight-color: transparent;
+      }
+      .wrapper .moves div:hover {
+        padding: 40px;
+        border: 1px solid orange;
+        border-radius: 5px;
+        font-size: 30px;
+        background-color: orange;
+      }
+
+      .wrapper .moves div:active {
+        background-color: transparent;
+      }
+
+      .text {
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .result p {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .result :nth-child(1) {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .result :nth-child(2) {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      /* 
+      .moves {
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="result"></div>
+      <div class="moves">
+        <!-- user moves -->
+        <div id="rock">
+          <p>👊</p>
+          Rock
+        </div>
+        <div id="paper">
+          <p>✋</p>
+          Paper
+        </div>
+        <div id="scissor">
+          <p>✌</p>
+          Scissor
+        </div>
+      </div>
+      <p class="text">Pick a move</p>
+    </div>
+
+    <!-- js file connection -->
+    <script src="index.js"></script>
+  </body>
+</html>
