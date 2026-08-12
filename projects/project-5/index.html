@@ -4,70 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock | Paper | Scissor</title>
+
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
+
       body {
         background-color: #212121;
         color: white;
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
       }
+
       .wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
         border: 2px solid orange;
         border-radius: 10px;
-        width: 30%;
-        margin: auto;
-        padding: 50px;
+
+        width: 100%;
+        max-width: 550px;
+
+        padding: 40px 30px;
       }
 
       .moves {
         display: flex;
-        padding: 20px;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
-        text-align: center;
+        padding: 20px 0;
+        width: 100%;
       }
 
       .wrapper .moves div {
-        padding: 40px;
+        flex: 1;
+        max-width: 150px;
+        padding: 30px 15px;
         border: 1px solid orange;
         border-radius: 5px;
-        font-size: 30px;
+        font-size: 24px;
+        text-align: center;
         cursor: pointer;
-        transition: all 0.3s;
+        transition: all 0.2s;
+
         user-select: none;
         -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-
         -webkit-tap-highlight-color: transparent;
       }
-      .wrapper .moves div:hover {
-        padding: 40px;
-        border: 1px solid orange;
-        border-radius: 5px;
-        font-size: 30px;
-        background-color: orange;
+
+      /* Desktop: hover */
+      @media (hover: hover) and (pointer: fine) {
+        .wrapper .moves div:hover {
+          background-color: orange;
+          color: #212121;
+        }
       }
 
+      /* Desktop + Mobile: click/touch */
       .wrapper .moves div:active {
-        background-color: transparent;
+        background-color: orange;
+        color: #212121;
+        transform: scale(0.95);
+      }
+
+      .wrapper .moves div p {
+        font-size: 35px;
+        margin-bottom: 8px;
       }
 
       .text {
         font-size: 30px;
         text-align: center;
+      }
+
+      .result {
+        text-align: center;
+        width: 100%;
       }
 
       .result p {
@@ -84,33 +107,107 @@
         font-size: 40px;
         font-weight: bold;
       }
-      /* 
-      .moves {
-      } */
+
+      /* =========================
+         Mobile
+      ========================= */
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .wrapper {
+          padding: 30px 15px;
+          width: 100%;
+        }
+
+        .moves {
+          gap: 7px;
+          padding: 20px 0;
+        }
+
+        .wrapper .moves div {
+          padding: 20px 8px;
+          font-size: 18px;
+        }
+
+        .wrapper .moves div p {
+          font-size: 30px;
+          margin-bottom: 5px;
+        }
+
+        .text {
+          font-size: 24px;
+        }
+
+        .result :nth-child(1) {
+          font-size: 24px;
+        }
+
+        .result :nth-child(2) {
+          font-size: 32px;
+        }
+      }
+
+      /* =========================
+         Very small phones
+      ========================= */
+
+      @media (max-width: 380px) {
+        body {
+          padding: 10px;
+        }
+
+        .wrapper {
+          padding: 25px 10px;
+        }
+
+        .moves {
+          gap: 5px;
+        }
+
+        .wrapper .moves div {
+          padding: 18px 5px;
+          font-size: 16px;
+        }
+
+        .wrapper .moves div p {
+          font-size: 26px;
+        }
+
+        .text {
+          font-size: 21px;
+        }
+      }
     </style>
   </head>
+
   <body>
     <div class="wrapper">
       <div class="result"></div>
+
       <div class="moves">
         <!-- user moves -->
         <div id="rock">
           <p>👊</p>
           Rock
         </div>
+
         <div id="paper">
           <p>✋</p>
           Paper
         </div>
+
         <div id="scissor">
           <p>✌</p>
           Scissor
         </div>
       </div>
+
       <p class="text">Pick a move</p>
     </div>
 
-    <!-- js file connection -->
     <script src="index.js"></script>
   </body>
 </html>
