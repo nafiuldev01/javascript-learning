@@ -101,18 +101,18 @@
 
       //! even listeners takes 3rd parameter as false or true default is always false when false it trigger event bubbling the code runs event from childrens element to parent element but whe true the even runs from parent to children element.
 
-      document
-        .getElementById("foodItems")
-        .addEventListener("click", function (e) {
-          if (e.target.tagName === "IMG") {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode;
-            removeIt.remove();
-          }
+    //   document
+    //     .getElementById("foodItems")
+    //     .addEventListener("click", function (e) {
+    //       if (e.target.tagName === "IMG") {
+    //         console.log(e.target.id);
+    //         let removeIt = e.target.parentNode;
+    //         removeIt.remove();
+    //       }
 
-          let removeIt = e.target.parentNode;
-          removeIt.remove();
-        });
-    </script>
+    //       let removeIt = e.target.parentNode;
+    //       removeIt.remove();
+    //     });
+    // </script>
   </body>
 </html>

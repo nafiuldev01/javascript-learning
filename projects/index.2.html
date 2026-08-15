@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      let showTime;
+      const sayTime = function (str) {
+        console.log(str, Date.now());
+      };
+
+      document.querySelector("#start").addEventListener("click", function () {
+        showTime = setInterval(sayTime, 1000, "nafi");
+        console.log("Start");
+      });
+
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearInterval(showTime);
+        console.log("stopped");
+      });
+    </script>
+  </body>
+</html>
