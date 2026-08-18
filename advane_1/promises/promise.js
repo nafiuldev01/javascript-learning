@@ -33,11 +33,104 @@
 //   console.log(data);
 // });
 
-new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    console.log("Async task 2 completed");
-    resolve();
-  }, 1000);
-}).then(function () {
-  console.log("Task 2 completed");
-});
+// new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     console.log("Async task 2 completed");
+//     resolve();
+//   }, 1000);
+// }).then(function () {
+//   console.log("Task 2 completed");
+// });
+
+//! how to pass data through resolve?
+
+// const promiseThree = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve({ username: "Nafiul Islam Siam", email: "nafiul@example.com" }); // pass the data through resolve to .then
+//   }, 1000);
+// });
+
+// promiseThree.then((data) => {
+//   console.log(
+//     `Hi my name is ${data.username} my contact email is ${data.email}`, // recieve the data through paramater of .then callback function
+//   );
+// });
+
+// ! how to pass error through reject cb?
+
+// const promiseFour = new Promise((resolve, reject) => {
+//   let error = true;
+//   setTimeout(() => {
+//     if (!error) {
+//       console.log("Async task 4 is done");
+//       resolve({ username: "Nafi", password: "123" });
+//     } else {
+//       reject("Something went wrong!"); // if error true this reject cb will run and it will pass the error to the catch block
+//     }
+//   }, 1000);
+// });
+
+// promiseFour
+//   .then((user) => {
+//     return user.username; // this return value will pass to the chaining .then
+//   })
+//   .then((username) => {
+//     // ** here
+//     console.log(username);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+//   .finally(() => console.log("Promise done either it is reloved or rejected"));
+
+// ! promise 5 hanlding promsie with async await
+
+// const promiseFive = new Promise((resolve, reject) => {
+//   let error = true;
+//   setTimeout(() => {
+//     if (!error) {
+//       console.log("Async 5 task complete");
+//       resolve({ username: "Javascript", password: "1234" });
+//     } else {
+//       reject("Error: Javascript code went wrong");
+//     }
+//   }, 1000);
+// });
+
+// async function handlePromiseFive() {
+//   try {
+//     const response = await promiseFive;
+//     console.log(response);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// handlePromiseFive();
+
+// ! promise 6 getting users data
+
+// async function getAllUsers() {
+//   try {
+//     const response = await fetch("https://dummyjson.com/users");
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(`Error fetching users data: ${error}`);
+//   }
+// }
+
+// getAllUsers();
+
+fetch("https://dummyjson.com/users")
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    if (data) {
+      console.log(data);
+    }
+  })
+  .catch((err) => {
+    console.log("Error fetching users");
+  });
