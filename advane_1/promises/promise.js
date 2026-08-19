@@ -122,15 +122,15 @@
 
 // getAllUsers();
 
-fetch("https://dummyjson.com/users")
-  .then((res) => {
-    return res.json();
-  })
-  .then((data) => {
-    if (data) {
-      console.log(data);
-    }
-  })
-  .catch((err) => {
-    console.log("Error fetching users");
-  });
+// fetch("https://dummyjson.com/users")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     if (data) {
+//       console.log(data);
+//     }
+//   })
+//   .catch((err) => {
+//     console.log("Error fetching users");
+//   });
